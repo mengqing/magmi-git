@@ -297,6 +297,10 @@ class Magmi_DefaultAttributeItemProcessor extends Magmi_ItemProcessor
                 case "tax/class_source_product":
                     $ovalue = $this->getTaxClassId($ivalue);
                     break;
+                // If Temando then process as normal
+                case "temando/entity_attribute_source_packaging":
+                    $ovalue = $ivalue;
+                    break;
                 // otherwise, standard option behavior
                 // get option id for value, create it if does not already exist
                 // do not insert if empty
